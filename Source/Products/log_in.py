@@ -16,6 +16,10 @@ def live_order():
     driver.find_element(By.XPATH, "//div[@class='order-list-title-end-section']//*[name()='svg']").click()
     sleep(10)
 
+def tear_down():
+    driver.quit()
+
 set_up()
 log_in()
 live_order()
+tear_down()
